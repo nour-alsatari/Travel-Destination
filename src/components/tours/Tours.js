@@ -1,15 +1,12 @@
 import toursStyle from "./Tours.css";
+import Tour from './tour/Tour.js';
 
 function Tours(props) {
   return (
     <div>
       {props.lol.map((ele) => {
         return (
-          <div className="cards">
-            <h4> {ele.name}</h4>
-            <img src={ele.image} alt="" />
-            <hr />
-          </div>
+          <Tour tour={ele} key={ele.id} />
         );
       })}
     </div>
